@@ -34,18 +34,14 @@
   
   <body>
 <div>
-	<a href="<c:url value='/jsps/book/list.jsp'/>">全部分类</a>
+	<a href="/bookstores/Categoryservlet?method=findAll">全部分类</a>
 </div>
 
+<c:forEach items="${categorylist}" var="i">
 
 <div>
-	<a href="<c:url value='/jsps/book/list.jsp'/>">JavaSE分类</a>
+	<a href="<c:url value='Categoryservlet?method=clickcategory&cid=${i.getCid() }'/>">${i.getCname()}</a>
 </div>
-<div>
-	<a href="<c:url value='/jsps/book/list.jsp'/>">JavaEE分类</a>
-</div>
-<div>
-	<a href="<c:url value='/jsps/book/list.jsp'/>">Javascript分类</a>
-</div>
+</c:forEach>
   </body>
 </html>

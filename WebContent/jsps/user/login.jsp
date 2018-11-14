@@ -22,10 +22,11 @@
   
   <body>
   <h1>登录</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/jsps/main.jsp'/>" method="post">
-	用户名：<input type="text" name="username" value=""/><br/>
-	密　码：<input type="password" name="password"/><br/>
+<p style="color: red; font-weight: 900">${msg}</p>
+<form action="<c:url value='/Userregistservlet'/>" method="post">
+     <input type="hidden" name="method" value="login"><br/>
+	用户名：<input type="text" name="username" value="${formusername}"/><br/>
+	密　码：<input type="password" name="password" value="${formpassword}"/><br/>
 	<input type="submit" value="登录"/>
 </form>
   </body>

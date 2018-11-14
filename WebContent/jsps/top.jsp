@@ -33,13 +33,22 @@
   <body>
 <h1 style="text-align: center;">bookstore</h1>
 <div style="font-size: 10pt;">
-		您好：张三&nbsp;&nbsp;|&nbsp;&nbsp;
+   <c:choose>
+   	<c:when test="${User_session!=null}">	
+   	  <br/>
+   	
+		您好：${User_session.getUsername()}&nbsp;&nbsp;|&nbsp;&nbsp;
 		<a href="<c:url value='/jsps/cart/list.jsp'/>" target="body">我的购物车</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 		<a href="<c:url value='/jsps/order/list.jsp'/>" target="body">我的订单</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-		<a href="javascript:alert('您已经退出');" target="_parent">退出</a>
-		<br/>
+		<a href="http://localhost:8080/bookstores/Userregistservlet?method=exit" target="_parent">退出</a>
+		</c:when>
+		
+	<c:when test="${User_session==null}">
+	<br/>
 		<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">登录</a> |&nbsp; 
 		<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">注册</a>
+	</c:when>
+   </c:choose>		
 </div>
   </body>
 </html>

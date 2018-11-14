@@ -12,7 +12,9 @@ import java.util.Properties;
 
 import javax.mail.MessagingException;
 import javax.mail.Session;
+import javax.security.auth.login.LoginException;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -115,7 +117,40 @@ public class Userregistservlet extends BaseServlet {
     	request.setAttribute("msg","赶快到邮箱里面激活吧！！！");
 		return "f:/jsps/msg.jsp";
 	}
-    
+ public String login (HttpServletRequest request, HttpServletResponse response) 
+    	throws ServletException, IOException {
+	    String username=request.getParameter("username");
+	    String password=request.getParameter("password");
+	    User user=new User();
+	    try {
+			user=userservice.login(username,password);
+		} catch (Exception e) {
+			
+			request.setAttribute("msg", e.getMessage());
+			request.setAttribute("formpassword", password);
+			request.setAttribute("formusername", username);
+			
+			return "f:/jsps/user/login.jsp";
+		}
+	    /*
+	     * 对于session的使用
+	     */
+	   request.getSession().setAttribute("User_session",user);
+	 
+	 
+	 return "f:/jsps/main.jsp";
 
+ }
+ public String exit(HttpServletRequest request, HttpServletResponse response) 
+	    	throws ServletException, IOException {
+	 request.getSession().invalidate();
 
+	 return "f:/jsps/main.jsp";
+ }
+ 
+ 
+ 
+ 
+ 
+ 
 }
