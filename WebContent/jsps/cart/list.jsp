@@ -71,44 +71,17 @@
 		<th>小计</th>
 		<th>操作</th>
 	</tr>
-
+  <c:forEach items="${cartlist}" var="i">
 	<tr>
-		<td><div><img src="<c:url value='/book_img/8758723-1_l.jpg'/>"/></div></td>
-		<td>Java详解</td>
-		<td>张孝祥</td>
-		<td>39.9元</td>
-		<td>2</td>
-		<td>79.8元</td>
+		<td><div><img src="<c:url value='/${i.getImage()}'/>"/></div></td>
+		<td>${i.getBname() }</td>
+		<td>${i.getAuthor() }</td>
+		<td>${i.getPrice() }</td>
+		<td>${i.getCount() }</td>
+		<td>${i.getSubtotal() }</td>
 		<td><a href="javascript:alert('删除购物项成功！');">删除</a></td>
 	</tr>
-	<tr>
-		<td><div><img src="<c:url value='/book_img/8991366-1_l.jpg'/>"/></div></td>
-		<td>Java详解</td>
-		<td>张孝祥</td>
-		<td>39.9元</td>
-		<td>2</td>
-		<td>79.8元</td>
-		<td><a href="javascript:alert('删除购物项成功！');">删除</a></td>
-	</tr>
-	<tr>
-		<td><div><img src="<c:url value='/book_img/9265169-1_l.jpg'/>"/></div></td>
-		<td>Java详解</td>
-		<td>张孝祥</td>
-		<td>39.9元</td>
-		<td>2</td>
-		<td>79.8元</td>
-		<td><a href="javascript:alert('删除购物项成功！');">删除</a></td>
-	</tr>
-	<tr>
-		<td><div><img src="<c:url value='/book_img/9317290-1_l.jpg'/>"/></div></td>
-		<td>Java详解</td>
-		<td>张孝祥</td>
-		<td>39.9元</td>
-		<td>2</td>
-		<td>79.8元</td>
-		<td><a href="javascript:alert('删除购物项成功！');">删除</a></td>
-	</tr>
-
+</c:forEach>
 	<tr>
 		<td colspan="7" align="right" style="font-size: 15pt; font-weight: 900">
 			合计：319.2元

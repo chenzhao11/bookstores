@@ -33,9 +33,9 @@
   <body>
  <c:forEach items="${clickcategorylist}" var="i">
   <div class="icon">
-    <a href="<c:url value='/jsps/book/desc.jsp'/>"><img src="<c:url value='/${i.getImage()}'/>" border="0"/></a>
+    <a href="<c:url value='Bookservlet?method=findbybid&bid=${i.getBid() }'/>"><img src="<c:url value='/${i.getImage()}'/>" border="0"/></a>
       <br/>
-   	<a href="<c:url value='/jsps/book/desc.jsp'/>">${i.getBname()}</a>
+   	<a href="<c:url value='Bookservlet?method=findbybid&bid=${i.getBid() }'/>">${i.getBname()}</a>
   </div>
  </c:forEach>
 

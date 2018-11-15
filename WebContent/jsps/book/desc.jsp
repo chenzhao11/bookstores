@@ -53,14 +53,16 @@
   
   <body>
   <div>
-    <img src="<c:url value='/book_img/8758723-1_l.jpg'/>" border="0"/>
+    <img src="<c:url value='${book.getImage() }'/>" border="0"/>
   </div>
-  <ul>
-    <li>书名：Java开发详解</li>
-    <li>作者：张孝祥</li>
-    <li>单价：39.9元</li>
+  <ul> 
+    <li>${book.getBname() }</li>
+    <li>${book.getAuthor() }</li>
+    <li>${book.getPrice() }</li>
   </ul>
-  <form id="form" action="<c:url value='/jsps/cart/list.jsp'/>" method="post">
+  <form id="form" action="<c:url value='Cartservlet'/>" method="post">
+    <input type="hidden" value="addorderitem" name="method">
+    <input type="hidden" value="${book.getBid()}" name="bid" }>
   	<input type="text" size="3" name="count" value="1"/>
   </form>
   <a href="javascript:document.getElementById('form').submit();"></a>

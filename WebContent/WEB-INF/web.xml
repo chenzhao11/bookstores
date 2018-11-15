@@ -23,4 +23,24 @@
     <servlet-name>Categoryservlet</servlet-name>
     <url-pattern>/Categoryservlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Bookservlet</display-name>
+    <servlet-name>Bookservlet</servlet-name>
+    <servlet-class>com.bookstore.book.web.servlet.Bookservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Bookservlet</servlet-name>
+    <url-pattern>/Bookservlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Cartservlet</display-name>
+    <servlet-name>Cartservlet</servlet-name>
+    <servlet-class>com.bookstore.cart.web.servlet.Cartservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Cartservlet</servlet-name>
+    <url-pattern>/Cartservlet</url-pattern>
+  </servlet-mapping>
 </web-app>

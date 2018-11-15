@@ -34,7 +34,7 @@
   
   <body>
 <div>
-	<a href="/bookstores/Categoryservlet?method=findAll">全部分类</a>
+	<a href="<c:url value='Bookservlet?method=findAll'/>">全部分类</a>
 </div>
 
 <c:forEach items="${categorylist}" var="i">
