@@ -39,7 +39,7 @@
    	
 		您好：${User_session.getUsername()}&nbsp;&nbsp;|&nbsp;&nbsp;
 		<a href="<c:url value='/jsps/cart/list.jsp'/>" target="body">我的购物车</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-		<a href="<c:url value='/jsps/order/list.jsp'/>" target="body">我的订单</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="<c:url value='/Ordersservlet?method=showorders'/>" target="body">我的订单</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 		<a href="http://localhost:8080/bookstores/Userregistservlet?method=exit" target="_parent">退出</a>
 		</c:when>
 		

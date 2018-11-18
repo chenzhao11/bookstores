@@ -138,14 +138,14 @@ public class Userregistservlet extends BaseServlet {
 	   request.getSession().setAttribute("User_session",user);
 	 
 	 
-	 return "f:/jsps/main.jsp";
+	 return "f:/index.jsp";
 
  }
  public String exit(HttpServletRequest request, HttpServletResponse response) 
 	    	throws ServletException, IOException {
 	 request.getSession().invalidate();
 
-	 return "f:/jsps/main.jsp";
+	 return "f:/index.jsp";
  }
  
  

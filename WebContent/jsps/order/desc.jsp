@@ -57,24 +57,27 @@
 <table border="1" width="100%" cellspacing="0" background="black">
 	<tr bgcolor="gray" bordercolor="gray">
 		<td colspan="6">
-			订单编号：123456　成交时间：2000-01-01 15:30　金额：<font color="red"><b>319.2元</b></font>
+			订单编号：${order.getOid() }　成交时间：<fmt:formatDate pattern="yyyy-mm-dd HH-mm-ss"
+			value="${order.getOrdertime()}"/>;
+			金额：<font color="red"><b>${order.getTotal() }元</b></font>
 		</td>
 	</tr>
-
+<c:forEach items="${orderitemlist }" var="i">
 	<tr bordercolor="gray" align="center">
 		<td width="15%">
-			<div><img src="<c:url value='/book_img/9317290-1_l.jpg'/>" height="75"/></div>
+			<div><img src="<c:url value='/${i.getBook().getImage() }'/>" height="75"/></div>
 		</td>
-		<td>书名：Java详解</td>
-		<td>单价：39.9元</td>
-		<td>作者：张孝祥</td>
-		<td>数量：2</td>
-		<td>小计：79.8元</td>
+		<td>书名：${i.getBook().getBname() }</td>
+		<td>单价：${i.getBook().getPrice() }</td>
+		<td>作者：${i.getBook().getAuthor() }</td>
+		<td>数量：${i.getCount() }</td>
+		<td>小计：${i.getSubtotal() }元</td>
 	</tr>
-
+</c:forEach>
 </table>
 <br/>
 <form method="post" action="javascript:alert('别点了，再点就去银行页面了！');" id="form" target="_parent">
+    <input type="hidden" name="method" value="pay">
 	收货地址：<input type="text" name="address" size="50" value="北京市海淀区金燕龙大厦2楼216室无敌收"/><br/>
 
 	选择银行：<br/>

@@ -43,4 +43,14 @@
     <servlet-name>Cartservlet</servlet-name>
     <url-pattern>/Cartservlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Ordersservlet</display-name>
+    <servlet-name>Ordersservlet</servlet-name>
+    <servlet-class>com.bookstore.order.web.servlet.Ordersservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ordersservlet</servlet-name>
+    <url-pattern>/Ordersservlet</url-pattern>
+  </servlet-mapping>
 </web-app>

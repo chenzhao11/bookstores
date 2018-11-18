@@ -59,7 +59,7 @@
 <table border="1" width="100%" cellspacing="0" background="black">
 	<tr>
 		<td colspan="7" align="right" style="font-size: 15pt; font-weight: 900">
-			<a href="javascript:alert('已清空购物车！');">清空购物车</a>
+			<a href="<c:url value='Cartservlet?method=clearall'/>">清空购物车</a>
 		</td>
 	</tr>
 	<tr>
@@ -79,17 +79,17 @@
 		<td>${i.getPrice() }</td>
 		<td>${i.getCount() }</td>
 		<td>${i.getSubtotal() }</td>
-		<td><a href="javascript:alert('删除购物项成功！');">删除</a></td>
+		<td><a href="<c:url value='Cartservlet?method=delete&bid=${i.getBid() }&subtotal=${i.getSubtotal() }'/>">删除</a></td>
 	</tr>
 </c:forEach>
 	<tr>
 		<td colspan="7" align="right" style="font-size: 15pt; font-weight: 900">
-			合计：319.2元
+			合计：${total }元
 		</td>
 	</tr>
 	<tr>
 		<td colspan="7" align="right" style="font-size: 15pt; font-weight: 900">
-			<a id="buy" href="<c:url value='/jsps/order/desc.jsp'/>"></a>
+			<a id="buy" href="<c:url value='Ordersservlet?method=buy'/>"></a>
 		</td>
 	</tr>
 </table>
