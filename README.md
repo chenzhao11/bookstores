@@ -5,7 +5,7 @@
 里面需要改进的地方有很多，只是实现了基本功能，页面是最简单的页面，主要做的后端部分
 
 # 文件结构
-
+```
 ├─src
 │  `│  c3p0-config.xml
 │  `│  email_template.properties
@@ -223,3 +223,4 @@
                 mysql-connector-java-5.1.13-bin.jar
                 standard.jar
                 xom-1.1.jar
+```
