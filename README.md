@@ -7,112 +7,112 @@
 # 文件结构
 
 ├─src
-│  │  c3p0-config.xml
-│  │  email_template.properties
-│  │  mailproperties.properties
-│  │
-│  └─com
-│      └─bookstore
-│          ├─book
-│          │  ├─dao
-│          │  │      Bookdao.java
-│          │  │
-│          │  ├─service
-│          │  │      Bookservice.java
-│          │  │
-│          │  └─web
-│          │      └─servlet
-│          │              Bookservlet.java
-│          │
-│          ├─cart
-│          │  ├─dao
-│          │  │      Cartdao.java
-│          │  │
-│          │  ├─domain
-│          │  │      Orderitem.java
-│          │  │
-│          │  ├─service
-│          │  │      Cartservice.java
-│          │  │
-│          │  └─web
-│          │      └─servlet
-│          │              Cartservlet.java
-│          │
-│          ├─category
-│          │  ├─dao
-│          │  │      Categorydao.java
-│          │  │
-│          │  ├─domain
-│          │  │      Book.java
-│          │  │      Category.java
-│          │  │
-│          │  ├─service
-│          │  │      Categoryservice.java
-│          │  │
-│          │  └─web
-│          │      └─servlet
-│          │              Categoryservlet.java
-│          │
-│          ├─order
-│          │  ├─dao
-│          │  │      Ordersdao.java
-│          │  │
-│          │  ├─domain
-│          │  │      Orderitem.java
-│          │  │      Orders.java
-│          │  │
-│          │  ├─service
-│          │  │      Ordersservice.java
-│          │  │
-│          │  └─web
-│          │      └─servlet
-│          │              Ordersservlet.java
-│          │
-│          └─user
-│              ├─domain
-│              │      User.java
-│              │
-│              ├─user
-│              │  └─web
-│              │      └─servlet
-│              │              ActiveException.java
-│              │              UserException.java
-│              │              UserLoginException.java
-│              │              Userregistservlet.java
-│              │
-│              ├─userdao
-│              │      Userdao.java
-│              │
-│              └─userservice
-│                      Userservice.java
+│  `│  c3p0-config.xml
+│  `│  email_template.properties
+│  `│  mailproperties.properties
+│  `│
+│  `└─com
+│      `└─bookstore
+│          `├─book
+│          `│  ├─dao
+│          `│  │      Bookdao.java
+│          `│  │
+│          `│  ├─service
+│          `│  │      Bookservice.java
+│          `│  │
+│          `│  └─web
+│          `│      └─servlet
+│          `│              Bookservlet.java
+│          `│
+│         ` ├─cart
+│          `│  ├─dao
+│          `│  │      Cartdao.java
+│          `│  │
+│          `│  ├─domain
+│          `│  │      Orderitem.java
+│          `│  │
+│          `│  ├─service
+│          `│  │      Cartservice.java
+│          `│  │
+│          `│  └─web
+│          `│      └─servlet
+│          `│              Cartservlet.java
+│          `│
+│          `├─category
+│          `│  ├─dao
+│          `│  │      Categorydao.java
+│          `│  │
+│          `│  ├─domain
+│          `│  │      Book.java
+│          `│  │      Category.java
+│          `│  │
+│          `│  ├─service
+│          `│  │      Categoryservice.java
+│          `│  │
+│          `│  └─web
+│          `│      └─servlet
+│          `│              Categoryservlet.java
+│          `│
+│         ` ├─order
+│          `│  ├─dao
+│          `│  │      Ordersdao.java
+│          `│  │
+│          `│  ├─domain
+│          `│  │      Orderitem.java
+│          `│  │      Orders.java
+│          `│  │
+│          `│  ├─service
+│          `│  │      Ordersservice.java
+│          `│  │
+│          `│  └─web
+│          `│      └─servlet
+│          `│              Ordersservlet.java
+│          `│
+│          `└─user
+│             ` ├─domain
+│             ` │      User.java
+│              `│
+│              `├─user
+│              `│  └─web
+│              `│      └─servlet
+│              `│              ActiveException.java
+│              `│              UserException.java
+│              `│              UserLoginException.java
+│              `│              Userregistservlet.java
+│              `│
+│              `├─userdao
+│              `│      Userdao.java
+│              `│
+│              `└─userservice
+│                      `Userservice.java
 │
 └─WebContent
-    │  index.jsp
-    │
-    ├─adminjsps
-    │  │  login.jsp
-    │  │  msg.jsp
-    │  │
-    │  └─admin
-    │      │  body.jsp
-    │      │  index.jsp
-    │      │  left.jsp
-    │      │  main.jsp
-    │      │  msg.jsp
-    │      │  top.jsp
-    │      │
-    │      ├─book
-    │      │      add.jsp
-    │      │      desc.jsp
-    │      │      list.jsp
-    │      │
-    │      ├─category
-    │      │      add.jsp
-    │      │      del.jsp
-    │      │      list.jsp
-    │      │      mod.jsp
-    │      │
-    │      └─order
+    `│  index.jsp
+    `│
+    `├─adminjsps
+    `│  │  login.jsp
+    `│  │  msg.jsp
+    `│  │
+    `│  └─admin
+    `│      │  body.jsp
+    `│      │  index.jsp
+    `│      │  left.jsp
+    `│      │  main.jsp
+    `│      │  msg.jsp
+    `│      │  top.jsp
+    `│      │
+    `│      ├─book
+    `│      │      add.jsp
+    `│      │      desc.jsp
+    `│      │      list.jsp
+    `│      │
+   ` │      ├─category
+    `│      │      add.jsp
+    `│      │      del.jsp
+    `│      │      list.jsp
+    `│      │      mod.jsp
+    `│      │
+    `│      └─order
     │              list.jsp
     │
     ├─bank_img
